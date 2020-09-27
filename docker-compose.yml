@@ -1,0 +1,25 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+    ports:
+      - "5432:5432"
+    volumes:
+      - "./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d"
+
+  odoo:
+    image: odoo-development:latest
+    build:
+      context: ./odoo
+    command: --dev=all
+    ports:
+      - "8069:8069"
+    volumes:
+      - "./odoo/odoo.conf:/etc/odoo/odoo.conf:ro"
+      - "./odoo/addons:/mnt/extra-addons"
+    depends_on:
+      - db
+
