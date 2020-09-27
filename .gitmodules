@@ -1,3 +1,6 @@
 [submodule "odoo"]
 	path = odoo
 	url = git@github.com:odoo/docker.git
+[submodule "addons/payment_sabadell"]
+	path = addons/payment_sabadell
+	url = git@github.com:JohnnyVM/payment_sabadell.git
