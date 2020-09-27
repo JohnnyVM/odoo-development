@@ -11,15 +11,15 @@ services:
       - "./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d"
 
   odoo:
-    image: odoo-development:latest
+    image: odoo-development:${odoo_version}
     build:
       context: ./odoo
     command: --dev=all
     ports:
       - "8069:8069"
     volumes:
-      - "./odoo/odoo.conf:/etc/odoo/odoo.conf:ro"
-      - "./odoo/addons:/mnt/extra-addons"
+      - "./odoo/${odoo_version}/odoo.conf:/etc/odoo/odoo.conf:ro"
+      - "./addons:/mnt/extra-addons"
     depends_on:
       - db
 
