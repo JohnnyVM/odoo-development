@@ -1,7 +1,5 @@
 # INSTALL GUIDE
 
-Still no well tuned, but you control de odoo image with the .env file
-
 ### TODO
 change database in function of the odoo version
 
