@@ -7,3 +7,6 @@
 [submodule "addons/facebook_catalog_integration"]
 	path = addons/facebook_catalog_integration
 	url = git@github.com:JohnnyVM/facebook_catalog_integration.git
+[submodule "addons/brand"]
+	path = addons/brand
+	url = git@github.com:OCA/brand.git
