@@ -4,3 +4,6 @@
 [submodule "addons/payment_sabadell"]
 	path = addons/payment_sabadell
 	url = git@github.com:JohnnyVM/payment_sabadell.git
+[submodule "addons/facebook_catalog_integration"]
+	path = addons/facebook_catalog_integration
+	url = git@github.com:JohnnyVM/facebook_catalog_integration.git
